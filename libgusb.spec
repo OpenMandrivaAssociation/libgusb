@@ -11,10 +11,10 @@ Group:     System/Libraries
 URL:       https://gitorious.org/gusb/
 Source0:   http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
 
-BuildRequires: glib2-devel >= 2.16.1
 BuildRequires: libtool
-BuildRequires: libgudev-devel
-BuildRequires: libusb1-devel
+BuildRequires: pkgconfig(glib-2.0)
+BuildRequires: pkgconfig(gudev-1.0)
+BuildRequires: pkgconfig(libusb-1.0)
 
 %description
 GUsb is a GObject wrapper for libusb1 that makes it easy to do
@@ -51,15 +51,10 @@ GLib headers and libraries for gusb.
 
 %install
 %makeinstall_std
-
 rm -f %{buildroot}%{_libdir}/libgusb.la
 
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %files -n %{libname}
-%{_libdir}/libgusb.so.%{major}
-%{_libdir}/libgusb.so.%{major}.0.*
+%{_libdir}/libgusb.so.%{major}*
 
 %files -n %{develname}
 %doc README AUTHORS NEWS COPYING
@@ -67,3 +62,4 @@ rm -f %{buildroot}%{_libdir}/libgusb.la
 %{_libdir}/libgusb.so
 %{_libdir}/pkgconfig/gusb.pc
 %{_datadir}/gtk-doc/html/gusb
+
