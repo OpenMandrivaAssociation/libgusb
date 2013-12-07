@@ -7,7 +7,7 @@
 Summary:	GLib wrapper around libusb1
 Name:		libgusb
 Version:	0.1.6
-Release:	2
+Release:	3
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://gitorious.org/gusb/
