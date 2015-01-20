@@ -6,8 +6,8 @@
 
 Summary:	GLib wrapper around libusb1
 Name:		libgusb
-Version:	0.1.6
-Release:	8
+Version:	0.2.4
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://gitorious.org/gusb/
@@ -53,8 +53,8 @@ GLib headers and libraries for gusb.
 %setup -q
 
 %build
-%configure2_5x \
-        --disable-static 
+%configure \
+        --disable-static
 
 %make
 
