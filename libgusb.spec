@@ -6,7 +6,7 @@
 
 Summary:	GLib wrapper around libusb1
 Name:		libgusb
-Version:	0.2.7
+Version:	0.2.9
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
@@ -68,10 +68,9 @@ GLib headers and libraries for gusb.
 %{_libdir}/girepository-1.0/GUsb-%{api}.typelib
 
 %files -n %{devname}
-%doc README AUTHORS NEWS COPYING
+%doc README AUTHORS NEWS
 %{_includedir}/gusb-1
 %{_libdir}/libgusb.so
 %{_libdir}/pkgconfig/gusb.pc
 %{_datadir}/gir-1.0/GUsb-1.0.gir
 %doc %{_datadir}/gtk-doc/html/gusb
-
