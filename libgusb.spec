@@ -75,4 +75,5 @@ GLib headers and libraries for gusb.
 %{_libdir}/libgusb.so
 %{_libdir}/pkgconfig/gusb.pc
 %{_datadir}/gir-1.0/GUsb-1.0.gir
+%{_datadir}/vala/vapi/gusb.*
 %doc %{_datadir}/gtk-doc/html/gusb
