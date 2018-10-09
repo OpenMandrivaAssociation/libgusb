@@ -12,7 +12,7 @@ License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://gitorious.org/gusb/
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-BuildRequires:	libtool
+BuildRequires:	meson
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gudev-1.0)
@@ -53,13 +53,11 @@ GLib headers and libraries for gusb.
 %autosetup -p1
 
 %build
-%configure \
-        --disable-static
-
-%make_build
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %files -n %{libname}
 %{_libdir}/libgusb.so.%{major}*
