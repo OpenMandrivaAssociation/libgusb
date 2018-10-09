@@ -69,7 +69,7 @@ GLib headers and libraries for gusb.
 %{_libdir}/girepository-1.0/GUsb-%{api}.typelib
 
 %files -n %{devname}
-%doc README AUTHORS NEWS
+%doc AUTHORS NEWS
 %{_includedir}/gusb-1
 %{_bindir}/gusbcmd
 %{_libdir}/libgusb.so
