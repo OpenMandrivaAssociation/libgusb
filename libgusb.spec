@@ -6,7 +6,7 @@
 
 Summary:	GLib wrapper around libusb1
 Name:		libgusb
-Version:	0.2.11
+Version:	0.3.0
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
@@ -50,16 +50,16 @@ Requires:	%{girname} = %{version}
 GLib headers and libraries for gusb.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure \
         --disable-static
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files -n %{libname}
 %{_libdir}/libgusb.so.%{major}*
