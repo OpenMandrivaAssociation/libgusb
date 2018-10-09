@@ -19,6 +19,7 @@ BuildRequires:	pkgconfig(gudev-1.0)
 BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	vala-devel
 BuildRequires:	vala-tools
+BuildRequires:	gtk-doc
 
 %description
 GUsb is a GObject wrapper for libusb1 that makes it easy to do
