@@ -3,6 +3,7 @@
 %define libname %mklibname gusb %{major}
 %define girname %mklibname gusb-gir %{api}
 %define devname %mklibname gusb -d
+%bcond_without	vala
 
 Summary:	GLib wrapper around libusb1
 Name:		libgusb
@@ -17,8 +18,10 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gudev-1.0)
 BuildRequires:	pkgconfig(libusb-1.0)
+%if %{with vala}
 BuildRequires:	vala-devel
 BuildRequires:	vala-tools
+%endif
 BuildRequires:	gtk-doc
 
 %description
@@ -56,7 +59,12 @@ GLib headers and libraries for gusb.
 %autosetup -p1
 
 %build
-%meson
+%meson \
+%if %{with vala}
+	-Dvapi=true
+%else
+	-Dvapi=false
+%endif
 %meson_build
 
 %install
@@ -75,5 +83,7 @@ GLib headers and libraries for gusb.
 %{_libdir}/libgusb.so
 %{_libdir}/pkgconfig/gusb.pc
 %{_datadir}/gir-1.0/GUsb-1.0.gir
+%if %{with vala}
 %{_datadir}/vala/vapi/gusb.*
+%endif
 %doc %{_datadir}/gtk-doc/html/gusb
