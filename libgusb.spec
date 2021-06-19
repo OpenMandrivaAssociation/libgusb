@@ -3,11 +3,11 @@
 %define libname %mklibname gusb %{major}
 %define girname %mklibname gusb-gir %{api}
 %define devname %mklibname gusb -d
-%bcond_without	vala
+%bcond_without vala
 
 Summary:	GLib wrapper around libusb1
 Name:		libgusb
-Version:	0.3.5
+Version:	0.3.7
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
