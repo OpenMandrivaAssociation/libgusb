@@ -7,7 +7,7 @@
 
 Summary:	GLib wrapper around libusb1
 Name:		libgusb
-Version:	0.3.9
+Version:	0.3.10
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
