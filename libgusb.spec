@@ -7,17 +7,23 @@
 
 Summary:	GLib wrapper around libusb1
 Name:		libgusb
-Version:	0.3.10
+Version:	0.4.5
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://gitorious.org/gusb/
-Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
+Source0:	https://github.com/hughsie/libgusb/releases/download/%{version}/libgusb-%{version}.tar.xz
+# Old source
+#Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
+BuildRequires:	cmake
 BuildRequires:	meson
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gudev-1.0)
 BuildRequires:	pkgconfig(libusb-1.0)
+BuildRequires:	pkgconfig(umockdev-1.0)
+BuildRequires:	pkgconfig(json-glib-1.0)
+BuildRequires:	pkgconfig(gi-docgen)
 %if %{with vala}
 BuildRequires:	vala-devel
 BuildRequires:	vala-tools
@@ -78,6 +84,7 @@ GLib headers and libraries for gusb.
 
 %files -n %{devname}
 %doc AUTHORS NEWS
+%doc %{_datadir}/doc/libgusb/
 %{_includedir}/gusb-1
 %{_bindir}/gusbcmd
 %{_libdir}/libgusb.so
@@ -86,4 +93,4 @@ GLib headers and libraries for gusb.
 %if %{with vala}
 %{_datadir}/vala/vapi/gusb.*
 %endif
-%doc %{_datadir}/gtk-doc/html/gusb
+
