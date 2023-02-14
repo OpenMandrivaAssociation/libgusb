@@ -92,4 +92,4 @@ GLib headers and libraries for gusb.
 %if %{with vala}
 %{_datadir}/vala/vapi/gusb.*
 %endif
-%doc %{_datadir}/gtk-doc/html/gusb
+#doc %{_datadir}/gtk-doc/html/gusb
