@@ -22,6 +22,7 @@ BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gudev-1.0)
 BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(umockdev-1.0)
+BuildRequires:	pkgconfig(json-glib-1.0)
 %if %{with vala}
 BuildRequires:	vala-devel
 BuildRequires:	vala-tools
