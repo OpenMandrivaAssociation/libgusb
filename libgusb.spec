@@ -84,6 +84,7 @@ GLib headers and libraries for gusb.
 
 %files -n %{devname}
 %doc AUTHORS NEWS
+%doc %{_datadir}/doc/libgusb/
 %{_includedir}/gusb-1
 %{_bindir}/gusbcmd
 %{_libdir}/libgusb.so
@@ -92,4 +93,4 @@ GLib headers and libraries for gusb.
 %if %{with vala}
 %{_datadir}/vala/vapi/gusb.*
 %endif
-#doc %{_datadir}/gtk-doc/html/gusb
+
