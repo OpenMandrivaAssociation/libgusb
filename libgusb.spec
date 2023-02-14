@@ -15,11 +15,13 @@ Url:		https://gitorious.org/gusb/
 Source0:	https://github.com/hughsie/libgusb/releases/download/%{version}/libgusb-%{version}.tar.xz
 # Old source
 #Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
+BuildRequires:	cmake
 BuildRequires:	meson
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gudev-1.0)
 BuildRequires:	pkgconfig(libusb-1.0)
+BuildRequires:	pkgconfig(umockdev-1.0)
 %if %{with vala}
 BuildRequires:	vala-devel
 BuildRequires:	vala-tools
