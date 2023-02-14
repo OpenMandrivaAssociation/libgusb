@@ -7,12 +7,14 @@
 
 Summary:	GLib wrapper around libusb1
 Name:		libgusb
-Version:	0.3.10
+Version:	0.4.5
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://gitorious.org/gusb/
-Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
+Source0:	https://github.com/hughsie/libgusb/releases/download/%{version}/libgusb-%{version}.tar.xz
+# Old source
+#Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
 BuildRequires:	meson
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
