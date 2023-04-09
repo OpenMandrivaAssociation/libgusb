@@ -1,0 +1,11 @@
+diff -up libgusb-0.4.5/gusb/libgusb_meson.ver.omv~ libgusb-0.4.5/gusb/libgusb_meson.ver
+--- libgusb-0.4.5/gusb/libgusb_meson.ver.omv~	2023-04-09 12:46:06.955760558 +0200
++++ libgusb-0.4.5/gusb/libgusb_meson.ver	2023-04-09 12:46:12.061808428 +0200
+@@ -1,7 +1,5 @@
+ LIBGUSB_0.1.0 {
+   global:
+     g_usb_*;
+-    environ;
+-    __progname;
+   local: *;
+ };

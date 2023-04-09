@@ -8,13 +8,14 @@
 Summary:	GLib wrapper around libusb1
 Name:		libgusb
 Version:	0.4.5
-Release:	2
+Release:	3
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://gitorious.org/gusb/
 Source0:	https://github.com/hughsie/libgusb/releases/download/%{version}/libgusb-%{version}.tar.xz
 # Old source
 #Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
+Patch0:		libgusb-0.4.5-fix-symbol-versioning.patch
 BuildRequires:	cmake
 BuildRequires:	meson
 BuildRequires:	pkgconfig(glib-2.0)
@@ -93,4 +94,3 @@ GLib headers and libraries for gusb.
 %if %{with vala}
 %{_datadir}/vala/vapi/gusb.*
 %endif
-
